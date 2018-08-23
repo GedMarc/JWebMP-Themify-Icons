@@ -2,13 +2,13 @@ package com.jwebmp.plugins.themify.icons;
 
 import com.jwebmp.core.base.html.Span;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
  * Creates a span that will contain this icon as a class name
  */
 public class ThemifyIcon
-		extends Span<GlobalChildren, NoAttributes, ThemifyIcon>
+		extends Span<IComponentHierarchyBase, NoAttributes, ThemifyIcon>
 {
 	/**
 	 * Creates the span for the given icon

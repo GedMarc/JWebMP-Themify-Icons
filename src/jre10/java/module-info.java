@@ -9,6 +9,6 @@ module com.jwebmp.plugins.themify.icons {
 	requires java.validation;
 	requires java.logging;
 
-	opens com.jwebmp.plugins.themify to com.fasterxml.jackson.databind,com.jwebmp.core;
-	opens com.jwebmp.plugins.themify.icons to com.fasterxml.jackson.databind,com.jwebmp.core;
+	//opens com.jwebmp.plugins.themify to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.themify.icons to com.fasterxml.jackson.databind, com.jwebmp.core;
 }
