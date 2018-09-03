@@ -16,6 +16,35 @@ public class ThemifyIconsPageConfigurator
 	 * Field reference
 	 */
 	private static final CSSReference reference = new CSSReference("ThemifyIcons", 5.23, "themify-icons/themify-icons.min.css");
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
+
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return ThemifyIconsPageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		ThemifyIconsPageConfigurator.enabled = mustEnable;
+	}
 
 	/**
 	 * Configures the given page for the parameters
@@ -31,8 +60,14 @@ public class ThemifyIconsPageConfigurator
 	{
 		if (!page.isConfigured())
 		{
-			page.addCssReference(reference);
+			page.addCssReference(ThemifyIconsPageConfigurator.reference);
 		}
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return ThemifyIconsPageConfigurator.enabled;
 	}
 }
