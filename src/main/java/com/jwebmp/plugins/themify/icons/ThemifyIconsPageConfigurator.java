@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
  * Configures the page for themify icons
  */
 public class ThemifyIconsPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<ThemifyIconsPageConfigurator>
 {
 	/**
 	 * Field reference
