@@ -1,15 +1,19 @@
 package com.jwebmp.plugins.themify.icons;
 
+import com.jwebmp.core.base.ComponentHierarchyBase;
 import com.jwebmp.core.base.html.Span;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
+import com.jwebmp.core.base.interfaces.IIcon;
 
 /**
  * Creates a span that will contain this icon as a class name
  */
 public class ThemifyIcon
 		extends Span<IComponentHierarchyBase, NoAttributes, ThemifyIcon>
+	implements IIcon<ThemifyIcon>
 {
+	private ThemifyIcons icon;
 	/**
 	 * Creates the span for the given icon
 	 *
@@ -18,8 +22,17 @@ public class ThemifyIcon
 	 */
 	public ThemifyIcon(ThemifyIcons icon)
 	{
-		this();
-		addClass(icon);
+		this.icon = icon;
+	}
+
+	@Override
+	public void preConfigure()
+	{
+		if(!isConfigured())
+		{
+			addClass(icon);
+		}
+		super.preConfigure();
 	}
 
 	/**
@@ -27,5 +40,18 @@ public class ThemifyIcon
 	 */
 	public ThemifyIcon()
 	{
+		//No config required
+	}
+
+	@Override
+	public String getClassName()
+	{
+		return icon.toString();
+	}
+
+	@Override
+	public ComponentHierarchyBase getIconComponent()
+	{
+		return this;
 	}
 }
