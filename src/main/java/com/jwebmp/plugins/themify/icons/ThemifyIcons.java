@@ -2,6 +2,7 @@ package com.jwebmp.plugins.themify.icons;
 
 import com.jwebmp.core.base.interfaces.ICssClassName;
 
+import static com.guicedee.guicedinjection.json.StaticStrings.*;
 import static com.jwebmp.core.utilities.StaticStrings.*;
 
 public enum ThemifyIcons
@@ -366,6 +367,6 @@ public enum ThemifyIcons
 	{
 		return classPrefix +
 		       name().replace(CHAR_UNDERSCORE, CHAR_DASH)
-		             .replace("\\$", "");
+		             .replace(STRING_DOLLAR_ESCAPED, STRING_EMPTY);
 	}
 }
