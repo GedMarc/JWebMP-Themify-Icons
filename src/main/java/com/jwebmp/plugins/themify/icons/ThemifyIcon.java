@@ -11,7 +11,7 @@ import com.jwebmp.core.base.interfaces.IIcon;
  */
 public class ThemifyIcon
 		extends Span<IComponentHierarchyBase, NoAttributes, ThemifyIcon>
-	implements IIcon<ThemifyIcon>
+	implements IIcon<com.jwebmp.core.base.interfaces.IComponentHierarchyBase, ThemifyIcon>
 {
 	private ThemifyIcons icon;
 	/**
