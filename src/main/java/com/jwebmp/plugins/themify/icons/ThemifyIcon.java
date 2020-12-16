@@ -10,8 +10,8 @@ import com.jwebmp.core.base.interfaces.IIcon;
  * Creates a span that will contain this icon as a class name
  */
 public class ThemifyIcon
-		extends Span<IComponentHierarchyBase, NoAttributes, ThemifyIcon>
-	implements IIcon<com.jwebmp.core.base.interfaces.IComponentHierarchyBase, ThemifyIcon>
+		extends Span<IComponentHierarchyBase<?,?>, NoAttributes, ThemifyIcon>
+	implements IIcon<com.jwebmp.core.base.interfaces.IComponentHierarchyBase<?,?>, ThemifyIcon>
 {
 	private ThemifyIcons icon;
 	/**
@@ -50,7 +50,7 @@ public class ThemifyIcon
 	}
 
 	@Override
-	public ComponentHierarchyBase getIconComponent()
+	public IComponentHierarchyBase<?,?> getIconComponent()
 	{
 		return this;
 	}
