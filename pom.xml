@@ -8,7 +8,7 @@
         <relativePath>../../../../../../</relativePath>
     </parent>
     <groupId>com.jwebmp.plugins.iconsets</groupId>
-
+    <version>0.0.0_0-SNAPSHOT</version>
     <artifactId>jwebmp-themify-icons</artifactId>
     <packaging>jar</packaging>
 
